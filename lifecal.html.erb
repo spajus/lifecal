@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title><%= LIFE_YEARS %> years from <%= BIRTHDATE %></title>
+    <style>
+    body {
+      line-height: 0px;
+      font-size: 0px;
+    }
+    div {
+      margin: 0;
+      padding: 0;
+    }
+    span {
+      font-size: 1px;
+      width: 0.7%;
+      height: 1.3%;
+      border: 1px solid black;
+      display: inline-block;
+      margin: 1px;
+    }
+    .lived {
+      background-color: grey;
+      -webkit-print-color-adjust: exact;
+    }
+    .wrapper {
+      min-width: 1200px;
+      min-height: 800px;
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <% 52.times do |week| %>
+        <div>
+          <% LIFE_YEARS.times do |year| %>
+            <span class="<%= lived?(year, week) %>"></span>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </body>
+</html>
