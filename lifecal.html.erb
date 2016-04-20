@@ -32,10 +32,10 @@
   </head>
   <body>
     <div class="wrapper">
-      <% 52.times do |week| %>
+      <% granularity.times do |n| %>
         <div>
           <% LIFE_YEARS.times do |year| %>
-            <span class="<%= lived?(year, week) %>"></span>
+            <span class="<%= lived?(year, n) %>"></span>
           <% end %>
         </div>
       <% end %>
