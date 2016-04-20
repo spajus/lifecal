@@ -12,6 +12,7 @@ Inspired by TED talk: [Tim Urban: Inside the mind of master procrastinator](http
 Usage: ./lifecal.rb <birthdate> [options]
     -s, --stdout                     Print output to stdout [default]
     -f, --file FILE                  Render output as html file
+    -g--granularity [GRANULARITY]    Select time granularity (weeks, months), default: weeks
     -h, --help                       Show this message
 
 ```
